@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Математическое перетягивание каната</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <h1>Математическое перетягивание каната</h1>
+
+      <section class="scoreboard">
+        <div class="player" id="player-one-box">
+          <h2>Игрок 1</h2>
+          <p class="score" id="player-one-score">0</p>
+        </div>
+
+        <div class="rope-container" aria-label="Канат между игроками">
+          <div class="rope-track">
+            <div class="center-line" aria-hidden="true"></div>
+            <div class="rope-marker" id="rope-marker"></div>
+          </div>
+          <p class="rope-hint">Маркер каната сдвигается к лидеру</p>
+        </div>
+
+        <div class="player" id="player-two-box">
+          <h2>Игрок 2</h2>
+          <p class="score" id="player-two-score">0</p>
+        </div>
+      </section>
+
+      <section class="question-panel">
+        <h3 id="turn-label">Ход: Игрок 1</h3>
+        <p class="question" id="question-text">Нажмите «Новый вопрос», чтобы начать</p>
+
+        <form id="answer-form">
+          <label for="answer-input">Ответ:</label>
+          <input id="answer-input" type="number" step="any" required />
+          <button type="submit">Проверить</button>
+        </form>
+
+        <div class="actions">
+          <button id="new-question-btn" type="button">Новый вопрос</button>
+          <button id="reset-btn" type="button">Сбросить игру</button>
+        </div>
+
+        <p class="status" id="status-text" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
